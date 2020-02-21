@@ -14,3 +14,8 @@ lazy val microservice = Project(appName, file("."))
   .configs(IntegrationTest)
   .settings(integrationTestSettings(): _*)
   .settings(resolvers += Resolver.jcenterRepo)
+
+TwirlKeys.templateImports ++= Seq(
+  "uk.gov.hmrc.govukfrontend.views.html.components._",
+  "uk.gov.hmrc.govukfrontend.views.html.helpers._"
+)

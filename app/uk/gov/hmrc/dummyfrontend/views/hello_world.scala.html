@@ -15,8 +15,11 @@
  *@
 
 @import uk.gov.hmrc.dummyfrontend.config.AppConfig
+
+@this(layout: govuk_template)
+
 @()(implicit request: Request[_], messages: Messages, appConfig: AppConfig)
 
-@main_template(title = "Hello from dummy-frontend", bodyClasses = None) {
+@layout(title = "Hello from dummy-frontend") {
     <h1>Hello from dummy-frontend !</h1>
 }
